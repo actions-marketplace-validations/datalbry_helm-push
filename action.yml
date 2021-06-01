@@ -4,7 +4,7 @@ description: 'Pushes a local chart to a ChartMusem compatible repository. Suppor
 branding:
   color: 'black'
   icon: 'upload-cloud'
-inputs:
+inputs:   
   access-token:
     description: 'API Token with read/write permissions to the helm repository'
     required: false
@@ -39,7 +39,7 @@ inputs:
     default: 'false'
 runs:
   using: 'docker'
-  image: 'docker://datalbry/helm-push:v3.0.3'
+  image: 'docker://datalbry/helm-push:v3.0.4'
   env:
     CHART_FOLDER: ${{ inputs.chart-folder }}
     FORCE: ${{ inputs.force }}
