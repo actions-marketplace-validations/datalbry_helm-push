@@ -1,17 +1,13 @@
 # Helm Push
-![Build](https://github.com/bsord/helm-push/workflows/Build/badge.svg)
-![GitHub last commit](https://img.shields.io/github/last-commit/bsord/helm-push.svg)
-![License](https://img.shields.io/github/license/bsord/helm-push.svg?style=flat)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)
 
-Push a chart to a ChartMuseum compatible repository with Helm v3
+Push a chart to a ChartMuseum compatible repository with Helm v3.
 
 ## Usage
 Using Token Auth:
 ```yaml
 steps:
   - name: Push Helm Chart to ChartMuseum
-    uses: bsord/helm-push@v3
+    uses: datalbry/helm-push@v3
     with:
       access-token: ${{ secrets.HELM_API_KEY }}
       repository-url: 'https://h.cfcr.io/user_or_org/reponame'
@@ -23,7 +19,7 @@ Using Password Auth:
 ```yaml
 steps:
   - name: Push Helm Chart to ChartMuseum
-    uses: bsord/helm-push@v3
+    uses: datalbry/helm-push@v3
     with:
       username: ${{ secrets.HELM_USERNAME }}
       password: ${{ secrets.HELM_PASSWORD }}
@@ -46,5 +42,3 @@ steps:
 ## License
 
 This project is distributed under the [MIT license](LICENSE.md).
-
-## TODO

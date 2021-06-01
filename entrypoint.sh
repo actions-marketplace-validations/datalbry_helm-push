@@ -53,6 +53,7 @@ fi
 cd ${CHART_FOLDER}
 helm repo add stable https://charts.helm.sh/stable
 helm repo update
+helm dependency update
 helm lint .
 helm package . ${CHARTMUSEUM_APPVERSION} ${CHARTMUSEUM_VERSION}
 helm inspect chart *.tgz
