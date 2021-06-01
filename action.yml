@@ -1,5 +1,5 @@
 # action.yml
-name: 'Helm Push'
+name: 'datalbry/helm-push'
 description: 'Pushes a local chart to a ChartMusem compatible repository. Supports token based auth and Chart.yaml version override.'
 branding:
   color: 'black'
