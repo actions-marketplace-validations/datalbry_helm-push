@@ -57,5 +57,5 @@ helm repo update
 helm dependency update
 helm lint .
 helm package . ${CHARTMUSEUM_APPVERSION} ${CHARTMUSEUM_VERSION}
-helm inspect chart *.tgz
+helm inspect chart .
 helm push *.tgz ${CHARTMUSEUM_URL} ${CHARTMUSEUM_USERNAME} ${CHARTMUSEUM_PASSWORD} ${CHARTMUSEUM_ACCESS_TOKEN} ${FORCE}
